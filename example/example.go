@@ -10,12 +10,25 @@ import (
 func main() {
 	teste := brainfuck.NewCompiler()
 
-	r := strings.NewReader(`++++++
+	r := strings.NewReader(`++++++++++
 [
->+++++++++++
-<-
+>+++++++
+>++++++++++
+>+++
+<<<-
 ]
->-.`)
+>++.
+>+.
++++++++..
++++.
+>++.
+<<+++++++++++++++.
+>.
++++.
+------.
+--------.
+>+.
+`)
 
 	bufferReadSize := make([]byte, 1)
 	for {
